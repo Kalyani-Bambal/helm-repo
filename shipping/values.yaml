@@ -4,3 +4,7 @@ image:
   pullPolicy: IfNotPresent
 appMessage: "Hello from shipping service"
 replicas: 4
+
+service:
+  type: ClusterIP
+  port: 80

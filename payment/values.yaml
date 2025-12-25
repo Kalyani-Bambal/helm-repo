@@ -4,3 +4,7 @@ image:
   pullPolicy: IfNotPresent
 appMessage: "Hello from payment service"
 replicas: 2
+
+service:
+  type: ClusterIP
+  port: 80
