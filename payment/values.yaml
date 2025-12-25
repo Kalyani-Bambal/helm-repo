@@ -1,0 +1,6 @@
+image:
+  repository: busybox
+  tag: latest
+  pullPolicy: IfNotPresent
+appMessage: "Hello from payment service"
+replicas: 2
