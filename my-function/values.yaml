@@ -1,0 +1,9 @@
+environment: prod
+region: us-west-2
+image:
+  repository: nginx
+  tag: stable
+labels:
+  app: my
+  owner: team-a
+replicas: 3
