@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-dep
+  name: nginx-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-dep
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: nginx-dep
+    spec:
+      containers:
+      {{- if eq .Values.env "dev" }}
+      - image: nginx:dev
+      {{- else if eq .Values.env "prod" }}
+      - image: nginx:prod
+      {{- else }}
+      - image: nginx:demo
+      {{- end }}
+        name: nginx
