@@ -1,0 +1,7 @@
+users:
+  - name: kalyani
+    role: admin
+  - name: ashu
+    role: editor
+  - name: ayusha
+    role: viewer
